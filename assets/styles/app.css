@@ -1,0 +1,754 @@
+a /* Liens par défaut (non survolés) */
+{
+    text-decoration: none;
+    color: mediumblue;
+    font-style: italic;
+}
+
+a:hover /* Apparence au survol des liens */
+{
+    text-decoration: underline;
+    color: green;
+}
+
+a img
+{
+    margin-top:18%;
+    align-self: center;
+    border: 3px grey double;
+}
+#CV
+{
+    margin-top:0px;
+    padding-top:0px;
+    margin-bottom:0px;
+    padding-bottom:0px;
+}
+h3
+{
+    color: #DE781F;
+}
+h2
+{
+    color: blue;
+    margin:20px;
+}
+h1
+{
+    width: 5%;
+    heigth: 5%;
+}
+ul
+{
+    margin:0px;
+    padding:0px;
+}
+body
+{
+    display: flex;
+    background-image: url("fond.jpg");
+    background-repeat: repeat; /* Le fond sera répété */
+    flex-direction: row;
+}
+.pro
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 47.5%;
+}
+#cacher
+{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#bouton
+{
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin-left:50%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding:0px;
+    cursor: pointer;
+
+}
+#bouton:hover
+{
+    width: 40px;
+    height: 40px;
+    border: 3px grey double;
+    margin-left:50%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding:0px;
+    cursor: pointer;
+
+}
+#cacher2
+{
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:0px;
+    padding:0px;
+}
+#bouton2
+{
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin-left:50%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding:0px;
+    cursor: pointer;
+
+}
+#bouton2:hover
+{
+    width: 40px;
+    height: 40px;
+    border: 3px grey double;
+    margin-left:50%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding:0px;
+    cursor: pointer;
+
+}
+#cacher3
+{
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#bouton3
+{
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin-left:50%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding:0px;
+    cursor: pointer;
+
+}
+#bouton3:hover
+{
+    width: 40px;
+    height: 40px;
+    border: 3px grey double;
+    margin-left:50%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding:0px;
+    cursor: pointer;
+
+}
+.exp_1
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-self: flex-end;
+}
+.exp_name_1
+{
+    display: flex;
+}
+.bordure
+{
+    width: 10%;
+    height: 100%;
+    margin-right: 15px;
+    background-image: url('bordure.jpeg');
+    border-radius: 10px;
+}
+
+.fonction
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 45px;
+    justify-content: space-between;
+    align-self: flex-end;
+}
+.nom
+{
+    display: flex;
+    font-size: 45px;
+}
+header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+section
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    margin-left: 40px;
+}
+.bloc_page
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0px 10px;
+}
+.partie_inf
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.base
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 47.5%;
+}
+.mail
+{
+    display: flex;
+    flex-direction: column;
+    font-family: Times New Roman;
+    justify-content: flex-start;
+}
+.espace
+{
+    width: 5%;
+}
+.separation
+{
+    width: 99%;
+    heigth: 10px;
+    border: 3px grey solid;
+    border-radius: 20px / 10px;
+}
+.entete
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.entete_sup2
+{
+    display: flex;
+    width: 99%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+}
+.entete_sup3
+{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fin
+{
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+@media screen and (width < 1024px)   /* en cas de smartphone, plus de photo visage*/
+{
+    a /* Liens par défaut (non survolés) */
+    {
+        text-decoration: none;
+        color: mediumblue;
+        font-style: italic;
+    }
+
+    a:hover /* Apparence au survol des liens */
+    {
+        text-decoration: underline;
+        color: green;
+    }
+    a img
+    {
+        display: none;
+    }
+    h3
+    {
+        color: #DE781F;
+    }
+    h2
+    {
+        color: blue;
+        margin:20px;
+    }
+    body
+    {
+        display: flex;
+        background-image: url("fond.jpg");
+        background-repeat: repeat; /* Le fond sera répété */
+        flex-direction: row;
+    }
+
+
+    .pro
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .base
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .base :nth-child(1) { order: 1; }
+    .base :nth-child(2) { order: 2; }
+    .base :nth-child(3) { order: 3; }
+    .base :nth-child(4) { order: 8; }
+    .base :nth-child(5) { order: 4; }
+    .base :nth-child(6) { order: 5; }
+    .base :nth-child(7) { order: 6; }
+    .base :nth-child(8) { order: 7; }
+
+    .menu_1
+    {
+        width: 40px;
+        height: 40px;
+    }
+    .exp_1
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-self: flex-end;
+    }
+    .exp_name_1
+    {
+        display: flex;
+    }
+    .bordure
+    {
+        display: none;
+    }
+
+    .fonction
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 20%;
+        justify-content: space-between;
+        align-self: flex-end;
+    }
+    .nom
+    {
+        display: flex;
+        font-size: 40px;
+    }
+    header
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    section
+    {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-self: center;
+    }
+    #cacher
+    {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #bouton
+    {
+        width: 40px;
+        height: 40px;
+        border: none;
+        margin-left:50%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding:0px;
+        cursor: pointer;
+
+    }
+    #bouton:hover
+    {
+        width: 40px;
+        height: 40px;
+        border: 3px grey double;
+        margin-left:50%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding:0px;
+        cursor: pointer;
+
+    }
+    #cacher2
+    {
+        display: block;
+        flex-direction: column;
+        justify-content: space-between;
+        margin:0px;
+        padding:0px;
+    }
+    #bouton2
+    {
+        width: 40px;
+        height: 40px;
+        border: none;
+        margin-left:50%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding:0px;
+        cursor: pointer;
+
+    }
+    #bouton2:hover
+    {
+        width: 40px;
+        height: 40px;
+        border: 3px grey double;
+        margin-left:50%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding:0px;
+        cursor: pointer;
+
+    }
+    #cacher3
+    {
+        display: block;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #bouton3
+    {
+        width: 40px;
+        height: 40px;
+        border: none;
+        margin-left:50%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding:0px;
+        cursor: pointer;
+
+    }
+    #bouton3:hover
+    {
+        width: 40px;
+        height: 40px;
+        border: 3px grey double;
+        margin-left:50%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding:0px;
+        cursor: pointer;
+
+    }
+    .bloc_page
+    {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0px 10px;
+    }
+    .partie_inf
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .base
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .mail
+    {
+        display: flex;
+        flex-direction: column;
+        font-family: Times New Roman;
+        justify-content: flex-start;
+    }
+    .espace
+    {
+        width: 5%;
+    }
+    .separation
+    {
+        width: 99%;
+        heigth: 10px;
+        border: 3px grey solid;
+        border-radius: 20px / 10px;
+    }
+    .entete
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .entete_sup2
+    {
+        display: flex;
+        width: 99%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: flex-start;
+    }
+    .entete_sup3
+    {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media all and (orientation: portrait)   /* en cas de smartphone, plus de photo */
+{
+    a /* Liens par défaut (non survolés) */
+    {
+        text-decoration: none;
+        color: mediumblue;
+        font-style: italic;
+    }
+
+    a:hover /* Apparence au survol des liens */
+    {
+        text-decoration: underline;
+        color: green;
+    }
+    a img
+    {
+        display: none;
+    }
+    h3
+    {
+        color: #DE781F;
+    }
+    h2
+    {
+        color: blue;
+        margin:20px;
+    }
+    body
+    {
+        display: flex;
+        background-image: url("fond.jpg");
+        background-repeat: repeat; /* Le fond sera répété */
+        flex-direction: row;
+    }
+    #cacher
+    {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #bouton
+    {
+        width: 40px;
+        height: 40px;
+        border: none;
+        margin-left:50%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding:0px;
+        cursor: pointer;
+
+    }
+    #bouton:hover
+    {
+        width: 40px;
+        height: 40px;
+        border: 3px grey double;
+        margin-left:50%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding:0px;
+        cursor: pointer;
+
+    }
+    #cacher2
+    {
+        display: block;
+        flex-direction: column;
+        justify-content: space-between;
+        margin:0px;
+        padding:0px;
+    }
+    #bouton2
+    {
+        width: 40px;
+        height: 40px;
+        border: none;
+        margin-left:50%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding:0px;
+        cursor: pointer;
+
+    }
+    #bouton2:hover
+    {
+        width: 40px;
+        height: 40px;
+        border: 3px grey double;
+        margin-left:50%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding:0px;
+        cursor: pointer;
+
+    }
+    #cacher3
+    {
+        display: block;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #bouton3
+    {
+        width: 40px;
+        height: 40px;
+        border: none;
+        margin-left:50%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding:0px;
+        cursor: pointer;
+
+    }
+    #bouton3:hover
+    {
+        width: 40px;
+        height: 40px;
+        border: 3px grey double;
+        margin-left:50%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding:0px;
+        cursor: pointer;
+
+    }
+    .bordure
+    {
+        display: none;
+    }
+
+    .fonction
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 40px;
+        justify-content: space-between;
+        align-self: flex-end;
+    }
+    .nom
+    {
+        display: flex;
+        font-size: 40px;
+    }
+    header
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    section
+    {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        margin-left: 10%;
+    }
+    .bloc_page
+    {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0px 10px;
+    }
+    .partie_inf
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .base
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .mail
+    {
+        display: flex;
+        flex-direction: column;
+        font-family: Times New Roman;
+        justify-content: flex-start;
+    }
+    .espace
+    {
+        width: 5%;
+    }
+    .separation
+    {
+        width: 99%;
+        heigth: 10px;
+        border: 3px grey solid;
+        border-radius: 20px / 10px;
+    }
+    .entete
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .entete_sup2
+    {
+        display: flex;
+        width: 99%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: flex-start;
+    }
+    .entete_sup3
+    {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .pro
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .base
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+}
