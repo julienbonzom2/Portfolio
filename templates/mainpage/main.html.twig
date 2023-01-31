@@ -3,7 +3,7 @@
 
 
 {% block body %}
-<
+
 
 <script>
     function cb(response) {
@@ -96,13 +96,12 @@
                         </div>
                         <div class="espace"></div><!-- espace -->
                         <div class="pro"><h2>Expériences Professionnelles:</h2>
-                            <a href="CV-J_BONZOM.pdf"target="_blank"><i><Strong>Curriculum vitae</Strong></i></a>
-                            <h3><Strong>Juin 2015- Ingénieur Calcul chez ENGINEERING CONCEPTION MAINTENANCE</Strong><br /><img src={{ asset("images/menu.jpg") }} title="Cliquez pour etendre" id='bouton'/></h3>
-
+                            <a href= asset("images/CV-J_BONZOM.pdf") }} target="_blank"><i><Strong>Curriculum vitae</Strong></i></a>
+                            <h3><Strong>Juin 2015- Ingénieur Calcul chez ENGINEERING CONCEPTION MAINTENANCE</Strong><br /></h3>
                             <div id="cacher">
 
                                 <ul>
-                                    <li><Strong>09/2021 – present:</Strong><br />Travaux divers au sein du bureau d'étude ECM de Mérignac.<br /><br />
+                                    <li><Strong>09/2021 – present:</Strong><br />Travaux divers au sein du bureau d'étude ECM de Mérignac.<br/><br/>
                                         <i>Utilisation de VBA, Patran, Nastran.</i></li>
 
                                     <br />
@@ -135,40 +134,8 @@
                                 </ul>
 
                             </div>
-                            <script async>
 
-                                let bouton = document.getElementById("bouton");
-                                const cacher = document.getElementById('cacher');
-
-
-                                cliquage()
-
-                                function cliquage() {
-                                    if (cacher.style.display === "none") {
-                                        cacher.style.display = "block";
-                                        bouton.src="menu2.jpg";
-                                        bouton.title="Cliquez pour réduire";
-                                    } else {
-                                        cacher.style.display  = "none";
-                                        bouton.src="menu.jpg";
-                                        bouton.title="Cliquez pour étendre";
-
-                                    }}
-                                function AdapterDivAResolution() {
-                                    let x_res = screen.width;
-                                    let y_res = screen.height;
-                                    if(x_res < 1024)
-                                    {
-                                        bouton.src="./images/menu2.jpg";
-                                        cacher.style.display = "block";
-                                        cacher.style.visibility="visible";
-                                    }
-                                }
-                                AdapterDivAResolution()
-                                bouton.addEventListener('click',cliquage, false);
-
-                            </script>
-                            <h3><Strong>Décembre 2009- Ingénieur Calcul chez SEGULA AERONAUTIQUE</Strong><br /><img src={{ asset("images/menu.jpg") }} title="Cliquez pour etendre" id='bouton2'/></h3>
+                            <h3><Strong>Décembre 2009- Ingénieur Calcul chez SEGULA AERONAUTIQUE</Strong><br></h3>
 
                             <div id="cacher2">
                                 <ul>
@@ -192,28 +159,9 @@
                                 </ul>
                             </div>
 
-                            <script>
 
-                                let bouton2= document.getElementById("bouton2");
-                                const cacher2 = document.getElementById('cacher2');
 
-                                cliquage();
-
-                                function cliquage() {
-                                    if (cacher2.style.display !== "none") {
-                                        cacher2.style.display  = "none";
-                                        bouton2.src={{ asset("images/menu.jpg") }};
-                                        bouton2.title="Cliquez pour étendre";
-                                    } else {
-                                        cacher2.style.display = "block";
-                                        bouton2.src={{ asset("images/menu2.jpg") }};
-                                        bouton2.title="Cliquez pour réduire";
-                                    }}
-                                bouton2.addEventListener('click',cliquage, false);
-
-                            </script>
-
-                            <h3><Strong>Janvier 2002 - Ingénieur Calcul chez AJILON ENGINEERING</Strong><br /><img src="./images/menu.jpg" title="Cliquez pour etendre" id='bouton3'/></h3>
+                            <h3><Strong>Janvier 2002 - Ingénieur Calcul chez AJILON ENGINEERING</Strong><br></h3>
 
                             <div id="cacher3">
                                 <ul>
@@ -244,27 +192,7 @@
                                 </ul>
 
                             </div>
-                            <script>
 
-                                let bouton3= document.getElementById("bouton3");
-                                const cacher3 = document.getElementById('cacher3');
-
-
-                                cliquage()
-                                function cliquage() {
-                                    if (cacher3.style.display != "none") {
-                                        cacher3.style.display  = "none";
-                                        bouton3.src="./images/menu.jpg";
-                                        bouton3.title="Cliquez pour étendre";
-                                    } else {
-                                        cacher3.style.display = "block";
-                                        bouton3.src="./images/menu2.jpg";
-                                        bouton3.title="Cliquez pour réduire";
-                                    }}
-                                bouton3.addEventListener('click',cliquage, false);
-
-
-                            </script>
                         </div></div>
                 <br /><br />
 
@@ -298,9 +226,9 @@
 
                     </form>
 
-                    <?php
-    include_once 'liste.php';
-    ?>
+
+
+
 
                 </div>
 

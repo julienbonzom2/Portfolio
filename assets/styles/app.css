@@ -59,7 +59,7 @@ body
 }
 #cacher
 {
-    display: none;
+    display: block;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -372,7 +372,7 @@ section
     }
     #cacher
     {
-        display: none;
+        display: block;
         flex-direction: column;
         justify-content: space-between;
     }
@@ -557,7 +557,7 @@ section
     }
     #cacher
     {
-        display: none;
+        display: block;
         flex-direction: column;
         justify-content: space-between;
     }
