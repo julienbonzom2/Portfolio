@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}EtapesPro{% endblock %}
+
+{% block body %}
+    <h1>EtapesPro</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ etapes_pro.id }}</td>
+            </tr>
+            <tr>
+                <th>Mois</th>
+                <td>{{ etapes_pro.Mois }}</td>
+            </tr>
+            <tr>
+                <th>Year</th>
+                <td>{{ etapes_pro.Year }}</td>
+            </tr>
+            <tr>
+                <th>Job</th>
+                <td>{{ etapes_pro.Job }}</td>
+            </tr>
+            <tr>
+                <th>Company</th>
+                <td>{{ etapes_pro.Company }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_etapes_pro_index') }}">back to list</a>
+
+    <a href="{{ path('app_etapes_pro_edit', {'id': etapes_pro.id}) }}">edit</a>
+
+    {{ include('etapes_pro/_delete_form.html.twig') }}
+{% endblock %}

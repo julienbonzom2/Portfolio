@@ -1,3 +1,11 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 a /* Liens par défaut (non survolés) */
 {
     text-decoration: none;
@@ -10,7 +18,6 @@ a:hover /* Apparence au survol des liens */
     text-decoration: underline;
     color: green;
 }
-
 a img
 {
     margin-top:18%;
@@ -43,12 +50,12 @@ ul
     margin:0px;
     padding:0px;
 }
-body
+.body_first
 {
     display: flex;
     background-image: url("fond.jpg");
     background-repeat: repeat; /* Le fond sera répété */
-    flex-direction: row;
+    flex-direction: column;
 }
 .pro
 {
@@ -163,10 +170,12 @@ body
 }
 .bordure
 {
-    width: 10%;
+
+    width: 5%;
     height: 100%;
     margin-right: 15px;
-    background-image: url('bordure.jpeg');
+    margin-left: 15px;
+    background-image: url("bordure.jpeg");
     border-radius: 10px;
 }
 
@@ -264,6 +273,11 @@ section
 }
 @media screen and (width < 1024px)   /* en cas de smartphone, plus de photo visage*/
 {
+    body
+    {
+        display: flex;
+        flex-direction: column;
+    }
     a /* Liens par défaut (non survolés) */
     {
         text-decoration: none;
@@ -289,12 +303,12 @@ section
         color: blue;
         margin:20px;
     }
-    body
+    .body_first
     {
         display: flex;
         background-image: url("fond.jpg");
         background-repeat: repeat; /* Le fond sera répété */
-        flex-direction: row;
+        flex-direction: column;
     }
 
 
@@ -521,9 +535,12 @@ section
         justify-content: space-between;
     }
 }
-@media all and (orientation: portrait)   /* en cas de smartphone, plus de photo */
-{
-    a /* Liens par défaut (non survolés) */
+@media all and (orientation: portrait)   /* en cas de smartphone, plus de photo */ {
+    body
+    {
+        display: flex;
+        flex-direction: column;
+    }a /* Liens par défaut (non survolés) */
     {
         text-decoration: none;
         color: mediumblue;
@@ -539,121 +556,121 @@ section
     {
         display: none;
     }
-    h3
-    {
+
+    h3 {
         color: #DE781F;
     }
-    h2
-    {
+
+    h2 {
         color: blue;
-        margin:20px;
+        margin: 20px;
     }
-    body
+
+    .body_first
     {
         display: flex;
         background-image: url("fond.jpg");
         background-repeat: repeat; /* Le fond sera répété */
-        flex-direction: row;
+        flex-direction: column;
     }
-    #cacher
-    {
+
+    #cacher {
         display: block;
         flex-direction: column;
         justify-content: space-between;
     }
-    #bouton
-    {
+
+    #bouton {
         width: 40px;
         height: 40px;
         border: none;
-        margin-left:50%;
+        margin-left: 50%;
         margin-top: 0px;
         margin-bottom: 0px;
-        padding:0px;
+        padding: 0px;
         cursor: pointer;
 
     }
-    #bouton:hover
-    {
+
+    #bouton:hover {
         width: 40px;
         height: 40px;
         border: 3px grey double;
-        margin-left:50%;
+        margin-left: 50%;
         margin-top: 0px;
         margin-bottom: 0px;
-        padding:0px;
+        padding: 0px;
         cursor: pointer;
 
     }
-    #cacher2
-    {
+
+    #cacher2 {
         display: block;
         flex-direction: column;
         justify-content: space-between;
-        margin:0px;
-        padding:0px;
+        margin: 0px;
+        padding: 0px;
     }
-    #bouton2
-    {
+
+    #bouton2 {
         width: 40px;
         height: 40px;
         border: none;
-        margin-left:50%;
+        margin-left: 50%;
         margin-top: 0px;
         margin-bottom: 0px;
-        padding:0px;
+        padding: 0px;
         cursor: pointer;
 
     }
-    #bouton2:hover
-    {
+
+    #bouton2:hover {
         width: 40px;
         height: 40px;
         border: 3px grey double;
-        margin-left:50%;
+        margin-left: 50%;
         margin-top: 0px;
         margin-bottom: 0px;
-        padding:0px;
+        padding: 0px;
         cursor: pointer;
 
     }
-    #cacher3
-    {
+
+    #cacher3 {
         display: block;
         flex-direction: column;
         justify-content: space-between;
     }
-    #bouton3
-    {
+
+    #bouton3 {
         width: 40px;
         height: 40px;
         border: none;
-        margin-left:50%;
+        margin-left: 50%;
         margin-top: 0px;
         margin-bottom: 0px;
-        padding:0px;
+        padding: 0px;
         cursor: pointer;
 
     }
-    #bouton3:hover
-    {
+
+    #bouton3:hover {
         width: 40px;
         height: 40px;
         border: 3px grey double;
-        margin-left:50%;
+        margin-left: 50%;
         margin-top: 0px;
         margin-bottom: 0px;
-        padding:0px;
+        padding: 0px;
         cursor: pointer;
 
     }
-    .bordure
-    {
+
+    .bordure {
         display: none;
     }
 
-    .fonction
-    {
+    .fonction {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -661,91 +678,91 @@ section
         justify-content: space-between;
         align-self: flex-end;
     }
-    .nom
-    {
+
+    .nom {
         display: flex;
         font-size: 40px;
     }
-    header
-    {
+
+    header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-    section
-    {
+
+    section {
         display: flex;
         flex-direction: column-reverse;
         justify-content: flex-start;
         margin-left: 10%;
     }
-    .bloc_page
-    {
+
+    .bloc_page {
         display: flex;
         flex-direction: row;
         width: 100%;
         margin: 0px 10px;
     }
-    .partie_inf
-    {
+
+    .partie_inf {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    .base
-    {
+
+    .base {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
     }
-    .mail
-    {
+
+    .mail {
         display: flex;
         flex-direction: column;
         font-family: Times New Roman;
         justify-content: flex-start;
     }
-    .espace
-    {
+
+    .espace {
         width: 5%;
     }
-    .separation
-    {
+
+    .separation {
         width: 99%;
         heigth: 10px;
         border: 3px grey solid;
         border-radius: 20px / 10px;
     }
-    .entete
-    {
+
+    .entete {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
     }
-    .entete_sup2
-    {
+
+    .entete_sup2 {
         display: flex;
         width: 99%;
         flex-direction: row;
         justify-content: space-between;
         align-self: flex-start;
     }
-    .entete_sup3
-    {
+
+    .entete_sup3 {
         display: flex;
         width: 100%;
         flex-direction: column;
         justify-content: space-between;
     }
-    .pro
-    {
+
+    .pro {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         width: 100%;
     }
-    .base
-    {
+
+    .base {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;

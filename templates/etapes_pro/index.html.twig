@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}EtapesPro index{% endblock %}
+
+{% block body %}
+    <h1>EtapesPro index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Mois</th>
+                <th>Year</th>
+                <th>Job</th>
+                <th>Company</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for etapes_pro in etapes_pros %}
+            <tr>
+                <td>{{ etapes_pro.id }}</td>
+                <td>{{ etapes_pro.Mois }}</td>
+                <td>{{ etapes_pro.Year }}</td>
+                <td>{{ etapes_pro.Job }}</td>
+                <td>{{ etapes_pro.Company }}</td>
+                <td>
+                    <a href="{{ path('app_etapes_pro_show', {'id': etapes_pro.id}) }}">show</a>
+                    <a href="{{ path('app_etapes_pro_edit', {'id': etapes_pro.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_etapes_pro_new') }}">Create new</a>
+{% endblock %}

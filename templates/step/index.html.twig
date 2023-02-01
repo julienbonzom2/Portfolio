@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Step index{% endblock %}
+
+{% block body %}
+    <h1>Step index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Month_begin</th>
+                <th>Year_begin</th>
+                <th>Month_end</th>
+                <th>Year_end</th>
+                <th>Description</th>
+                <th>Skills</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for step in steps %}
+            <tr>
+                <td>{{ step.id }}</td>
+                <td>{{ step.MonthBegin }}</td>
+                <td>{{ step.YearBegin }}</td>
+                <td>{{ step.monthEnd }}</td>
+                <td>{{ step.yearEnd }}</td>
+                <td>{{ step.description }}</td>
+                <td>{{ step.skills }}</td>
+                <td>
+                    <a href="{{ path('app_step_show', {'id': step.id}) }}">show</a>
+                    <a href="{{ path('app_step_edit', {'id': step.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_step_new') }}">Create new</a>
+{% endblock %}
