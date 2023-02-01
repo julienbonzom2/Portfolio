@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Skills{% endblock %}
+
+{% block body %}
+    <h1>Skills</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ skill.id }}</td>
+            </tr>
+            <tr>
+                <th>Languages</th>
+                <td>{{ skill.Languages }}</td>
+            </tr>
+            <tr>
+                <th>AIRBUS</th>
+                <td>{{ skill.AIRBUS }}</td>
+            </tr>
+            <tr>
+                <th>DASSAULT</th>
+                <td>{{ skill.DASSAULT }}</td>
+            </tr>
+            <tr>
+                <th>CALCUL_DESIGN</th>
+                <td>{{ skill.CALCULDESIGN }}</td>
+            </tr>
+            <tr>
+                <th>OFFICE</th>
+                <td>{{ skill.OFFICE }}</td>
+            </tr>
+            <tr>
+                <th>Langues</th>
+                <td>{{ skill.Langues }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_skills_index') }}">back to list</a>
+
+    <a href="{{ path('app_skills_edit', {'id': skill.id}) }}">edit</a>
+
+    {{ include('skills/_delete_form.html.twig') }}
+{% endblock %}

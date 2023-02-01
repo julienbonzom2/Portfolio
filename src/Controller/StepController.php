@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Step;
 use App\Form\StepType;
 use App\Repository\StepRepository;
+use App\Repository\EtapesProRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,11 +15,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class StepController extends AbstractController
 {
     #[Route('/', name: 'app_step_index', methods: ['GET'])]
-    public function index(StepRepository $stepRepository): Response
+    public function index(StepRepository $stepRepository, EtapesProRepository $etapesProRepository): Response
     {
         return $this->render('step/index.html.twig', [
             'steps' => $stepRepository->findAll(),
-        ]);
+            ]);
     }
 
     #[Route('/new', name: 'app_step_new', methods: ['GET', 'POST'])]

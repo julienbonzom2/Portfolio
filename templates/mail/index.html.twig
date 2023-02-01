@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}All categories{% endblock %}
+
+
+{% block body %}
+
+    <h1>Toutes les messages de la table mail : </h1>
+
+    {% for mail in mails %}
+
+        <div>
+
+            {{ mail.email }}    {{ mail.subject }}    {{ mail.texte }}
+
+        </div>
+
+    {% else %}
+
+        Aucun mail trouvée.
+
+    {% endfor %}
+
+
+    <a href="{{ path('main') }}">
+
+        Retour à l'accueil
+
+    </a>
+
+{% endblock %}

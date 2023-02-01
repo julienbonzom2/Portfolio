@@ -15,6 +15,7 @@
                 <th>Year_end</th>
                 <th>Description</th>
                 <th>Skills</th>
+                <th>Entreprise</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -28,6 +29,7 @@
                 <td>{{ step.yearEnd }}</td>
                 <td>{{ step.description }}</td>
                 <td>{{ step.skills }}</td>
+                <td>{{ step.etapes_pro.company }}</td>
                 <td>
                     <a href="{{ path('app_step_show', {'id': step.id}) }}">show</a>
                     <a href="{{ path('app_step_edit', {'id': step.id}) }}">edit</a>
