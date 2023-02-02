@@ -97,43 +97,21 @@
                             <div class="espace"></div><!-- espace -->
                             <div class="pro"><h2>Expériences Professionnelles:</h2>
                                 <a href= asset("images/CV-J_BONZOM.pdf") }} target="_blank"><i><Strong>Curriculum vitae</Strong></i></a>
-                                <h3><Strong>Juin 2015- Ingénieur Calcul chez ENGINEERING CONCEPTION MAINTENANCE</Strong><br /></h3>
+                                {% for etapepro in etapespro %}
+                                <h3><Strong>{{ etapepro.mois }} {{ etapepro.year }} - {{ etapepro.job }} chez {{ etapepro.company }}</Strong><br /></h3>
                                 <div id="cacher">
-
                                     <ul>
-                                        <li><Strong>09/2021 – present:</Strong><br />Travaux divers au sein du bureau d'étude ECM de Mérignac.<br/><br/>
-                                            <i>Utilisation de VBA, Patran, Nastran.</i></li>
+                                    {% for step in steps %}
 
-                                        <br />
-                                        <li><Strong>04/2018 – 09/2021:</Strong><br />Traitement des réparations Falcon airplanes in-situ DASSAULT Mérignac<br />
-                                            Contribution à la justification de pièces métalliques et composites en statique et fatigue au travers des méthodologies Dassault.<br /><br />
-                                            <i>Utilisation des Outils Calcul Dassault, NASGRO, CATIA FE, Ouvrages Références (Peterson, ESDU,...)</i></li>
-
-                                        <br />
-
-                                        <li><Strong>09/2016 – 01/2018 :</Strong><br /> Traitement des dérogations A350-900/1000_MLGB en tache 300-350 (tâches calcul) in-situ STELIA Rochefort :<br />
-
-                                            Contribution à la justification de pièces métalliques en statique et fatigue au travers des méthodologies développées au sein de l’équipe.<br /><br />
-                                            <i>Utilisation de SAP, MTS004, M2841, ISAMI.</i><br /></li>
-
-                                        <br />
-
-                                        <li><Strong>04/2016 – 08/2016:</Strong><br />  Réalisation des dossiers SRM de la Section S15 de l’A330_NEO pour STELIA :<br />
-                                            Analyse statique des cadres et des panneaux suite aux réparations du type ragréages<br />Rédaction des dossiers SRM.<br /><br />
-                                            <i>Utilisation de ISAMI Express, VBA, </i><br /></li>
-
-                                        <br />
-
-                                        <li><Strong>06/2015 – 03/2016 :</Strong><br /> Traitement des dérogations S14A en tache 300-350 (tâches calcul) in-situ STELIA Rochefort :<br />
-
-                                            Contribution à la justification de pièces métalliques en statique et fatigue au travers des méthodologies développées au sein de l’équipe.<br /><br />
-                                            <i>Utilisation de SAP, MTS004, M2841, ASSIST, SAFE.</i><br /></li>
-
+                                        <li><Strong>{{ step.Month_begin }}/{{ step.Year_begin }} – {{ step.month_end }}/{{ step.year_end }}:</Strong><br />{{ step.description }}<br/><br/>
+                                            <i>{{ step.skills }}</i>
+                                    </li>
                                         <br />
 
                                     </ul>
-
+                                    {% endfor %}
                                 </div>
+                                {% endfor %}
 
                                 <h3><Strong>Décembre 2009- Ingénieur Calcul chez SEGULA AERONAUTIQUE</Strong><br></h3>
 
