@@ -40,48 +40,48 @@ class Step
         return $this->id;
     }
 
-    public function getMonthBegin(): ?int
+    public function getMonth_Begin(): ?int
     {
         return $this->Month_begin;
     }
 
-    public function setMonthBegin(int $Month_begin): self
+    public function setMonth_Begin(int $Month_begin): self
     {
         $this->Month_begin = $Month_begin;
 
         return $this;
     }
 
-    public function getYearBegin(): ?int
+    public function getYear_Begin(): ?int
     {
         return $this->Year_begin;
     }
 
-    public function setYearBegin(int $Year_begin): self
+    public function setYear_Begin(int $Year_begin): self
     {
         $this->Year_begin = $Year_begin;
 
         return $this;
     }
 
-    public function getMonthEnd(): ?int
+    public function getMonth_End(): ?int
     {
         return $this->month_end;
     }
 
-    public function setMonthEnd(int $month_end): self
+    public function setMonth_End(int $month_end): self
     {
         $this->month_end = $month_end;
 
         return $this;
     }
 
-    public function getYearEnd(): ?int
+    public function getYear_End(): ?int
     {
         return $this->year_end;
     }
 
-    public function setYearEnd(int $year_end): self
+    public function setYear_End(int $year_end): self
     {
         $this->year_end = $year_end;
 

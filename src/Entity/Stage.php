@@ -37,48 +37,48 @@ class Stage
         return $this->id;
     }
 
-    public function getMonthBegin(): ?int
+    public function getMonth_Begin(): ?int
     {
         return $this->Month_begin;
     }
 
-    public function setMonthBegin(int $Month_begin): self
+    public function setMonth_Begin(int $Month_begin): self
     {
         $this->Month_begin = $Month_begin;
 
         return $this;
     }
 
-    public function getYearBegin(): ?int
+    public function getYear_Begin(): ?int
     {
         return $this->Year_begin;
     }
 
-    public function setYearBegin(int $Year_begin): self
+    public function setYear_Begin(int $Year_begin): self
     {
         $this->Year_begin = $Year_begin;
 
         return $this;
     }
 
-    public function getMonthEnd(): ?int
+    public function getMonth_End(): ?int
     {
         return $this->Month_end;
     }
 
-    public function setMonthEnd(int $Month_end): self
+    public function setMonth_End(int $Month_end): self
     {
         $this->Month_end = $Month_end;
 
         return $this;
     }
 
-    public function getYearEnd(): ?int
+    public function getYear_End(): ?int
     {
         return $this->Year_end;
     }
 
-    public function setYearEnd(int $Year_end): self
+    public function setYear_End(int $Year_end): self
     {
         $this->Year_end = $Year_end;
 

@@ -1,0 +1,44 @@
+{% extends '/base.html.twig' %}
+
+{% block title %}All programs{% endblock %}
+
+
+{% block body %}
+
+
+<h5><i>Si vous avez un commentaire à propos de ce site, laissez moi un message...</i></h5>
+
+<div class="question">
+    <form  action="http://127.0.0.1:8000/deuxieme.php"  method="post">
+
+        <div>
+
+            <label  for="pseudo">Pseudo (10 caractères):</label>
+
+            <input  type="text"  id="pseudo"  name="user_pseudo" maxlength="10">
+
+        </div>
+        <br>
+        <div>
+
+            <label  for="message">Message (100 caractères) :</label><br>
+
+            <textarea  id="message"  name="user_message" rows="5" cols="66" maxlength="100"></textarea>
+
+        </div>
+        <br>
+        <div  class="button">
+
+            <button  type="submit">Envoyer votre message</button>
+
+        </div>
+
+    </form>
+
+
+
+
+
+</div>
+
+{% endblock %}

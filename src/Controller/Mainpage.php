@@ -11,7 +11,7 @@ use App\Repository\StepRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
+use Doctrine\ORM\QueryBuilder;
 
 
 class Mainpage extends AbstractController
@@ -25,9 +25,9 @@ class Mainpage extends AbstractController
         $Formations=$formationRepository->findBy([], ['Date' => 'DESC']);
         $Skills=$skillsRepository->findAll();
         $Stages=$stagesRepository->findBy([], ['Year_begin' => 'DESC']);
-        $Steps=$stepsRepository->findBy([], ['Year_begin' => 'DESC'], ['Month_begin' => 'DESC']) ;
-//var_dump($Steps);
-//die();
+        $Steps=$stepsRepository->findBy([], ['Year_begin' => 'DESC']);
+
+
         return $this->render('mainpage/main.html.twig', [
 
             'etapespro' => $EtapesPro,
@@ -37,5 +37,10 @@ class Mainpage extends AbstractController
             'steps' => $Steps,
         ]);
     }
-
+    #[Route('/pdf/', name: 'pdf')]
+    public function visualiserdocument() {
+        $projectRoot = $this->getParameter('kernel.project_dir');
+        $filename = "CV-J_BONZOM.pdf";
+        return $this->file( $projectRoot.'/public/documents/'.$filename );
+    }
 }

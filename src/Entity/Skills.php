@@ -73,12 +73,12 @@ class Skills
         return $this;
     }
 
-    public function getCALCULDESIGN(): ?string
+    public function getCALCUL_DESIGN(): ?string
     {
         return $this->CALCUL_DESIGN;
     }
 
-    public function setCALCULDESIGN(string $CALCUL_DESIGN): self
+    public function setCALCUL_DESIGN(string $CALCUL_DESIGN): self
     {
         $this->CALCUL_DESIGN = $CALCUL_DESIGN;
 

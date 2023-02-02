@@ -57,35 +57,32 @@
                             <div class="base">
                                 <div class="competences"><p><h2>Compétences:</h2>
                                     <ul>
-                                        <li><Strong>Languages Informatiques:</Strong> HTML, CSS, PHP, SYMFONY, JAVASCRIPT, GIT, C, ADA, VISUAL BASIC (formation année 2006 et utilisation).</li>
-                                        <li><Strong>Outils AIRBUS:</Strong> SAP (formation année 2016 et utilisation), ACSA, PSN, SAFE, ISAMI, ASSIST, ASSIST-LINK.</li>
-                                        <li><Strong>Outils DASSAULT:</Strong> Outils Calcul Dassault (Statique/Fatigue et Tolerance aux dommages), NASGRO, CATIA FE (formation année 2017 et utilisation)</li>
-                                        <li><Strong>Outils CALCUL/DESIGN:</Strong> PATRAN/NASTRAN, CADLINK (formation année 2006 et utilisation), CADDS 5, CATIAV5, EFFEL, AUTOCAD2000.</li>
-                                        <li><Strong>Outils OFFICE:</Strong> EXCEL, WORD, POWERPOINT, VISUAL BASIC (formation année 2006 et utilisation).</li>
-                                        <li><Strong>Langues:</Strong> Anglais (TOEIC Listening & Reading: 825 – 12/2013), Espagnol Scolaire.</li>
+                                        {% for skill in skills %}
+                                        <li><Strong>Languages Informatiques:</Strong> {{ skill.Languages }}</li>
+                                        <li><Strong>Outils AIRBUS:</Strong> {{ skill.AIRBUS }}</li>
+                                        <li><Strong>Outils DASSAULT:</Strong> {{ skill.DASSAULT }}</li>
+                                        <li><Strong>Outils CALCUL/DESIGN:</Strong> {{ skill.CALCUL_DESIGN }}</li>
+                                        <li><Strong>Outils OFFICE:</Strong> {{ skill.OFFICE }}</li>
+                                        <li><Strong>Langues:</Strong> {{ skill.Langues }}</li>
+                                        {% endfor %}
                                     </ul>
 
                                 </div>
 
                                 <div class="formation"><p><h2>Formation:</h2>
-
+                                    {% for formation in formations %}
                                     <ul>
-                                        <li><Strong>2022</Strong> WILDCODESCHOOL de BORDEAUX (formation développeur web Full-Stack).</li>
-                                        <li><Strong>2001</Strong> Diplôme d’Ingénieur génie Mécanique de l’INSA de TOULOUSE<br />DEA de génie Mécanique (fatigue, matériaux composites,...).</li>
-                                        <li><Strong>1996</Strong> Baccalauréat Scientifique - spécialité technologie industrielle (Mention AB).</li>
-
+                                        <li><Strong>{{ formation.date }}</Strong> {{ formation.texte }}</li>
                                     </ul>
+                                    {% endfor %}
 
                                 </div>
 
                                 <div class="stages"><p><h2>Stages:</h2>
-
                                     <ul>
-                                        <li><Strong>03/2001 – 07/2001:</Strong><br />Stage chez PRECIMECA environnement (Fabricant de broyeurs).<br />Avant-projet visant l’implantation d’un ensemble de broyage sur une berce.</li>
-
-
-
-                                        <li><Strong>07/2000 – 08/2000 :</Strong><br /> Stage au Laboratoire-maquette EADS.<br />Conception CAO sous CADDS de maquettes destinées aux essais en soufflerie.</li>
+                                    {% for stage in stages %}
+                                    <li><Strong>{{ stage.month_begin }}/{{ stage.year_begin }} – {{ stage.month_end }}/{{ stage.year_end }}:</Strong><br />Stage chez {{ stage.company }}.<br />{{ stage.descriptif }}</li>
+                                    {% endfor %}
                                     </ul>
                                 </div>
                                 <div class="loisirs"><p><h2>Loisirs:</h2>
@@ -96,119 +93,27 @@
                             </div>
                             <div class="espace"></div><!-- espace -->
                             <div class="pro"><h2>Expériences Professionnelles:</h2>
-                                <a href= asset("images/CV-J_BONZOM.pdf") }} target="_blank"><i><Strong>Curriculum vitae</Strong></i></a>
+                                <a href="http://127.0.0.1:8000/CV-J_BONZOM.pdf" target="_blank"><i><Strong>Curriculum vitae</Strong></i></a>
                                 {% for etapepro in etapespro %}
                                 <h3><Strong>{{ etapepro.mois }} {{ etapepro.year }} - {{ etapepro.job }} chez {{ etapepro.company }}</Strong><br /></h3>
                                 <div id="cacher">
                                     <ul>
-                                    {% for step in steps %}
+                                        {% for step in steps %}
 
-                                        <li><Strong>{{ step.Month_begin }}/{{ step.Year_begin }} – {{ step.month_end }}/{{ step.year_end }}:</Strong><br />{{ step.description }}<br/><br/>
-                                            <i>{{ step.skills }}</i>
-                                    </li>
-                                        <br />
-
+                                            {% if  step.etapespro.company  ==  etapepro.company  %}
+                                            <li><Strong>{{ step.Month_begin }}/{{ step.Year_begin }} – {{ step.month_end }}/{{ step.year_end }}:</Strong><br />{{ step.description }}<br/><br/>
+                                                <i>Utilisation {{ step.skills }}</i>
+                                            </li>
+                                            {% endif %}
+                                            <br />
+                                        {% endfor %}
                                     </ul>
-                                    {% endfor %}
                                 </div>
                                 {% endfor %}
 
-                                <h3><Strong>Décembre 2009- Ingénieur Calcul chez SEGULA AERONAUTIQUE</Strong><br></h3>
-
-                                <div id="cacher2">
-                                    <ul>
-                                        <li><Strong>01/2013-01/2015:</Strong><br />Pré-dimensionnement, Justification trappes A350-1000 pour DAHER-SOCATA:<br />
-                                            Analyse analytique et FEM de pièces métalliques,<br />Rédaction des dossiers MAT_B et MAT_C,<br />Maillage des pièces métalliques du mécanisme des trappes.<br /><br /><i>Utilisation des Outils Calcul Dassault, NASGRO, CATIA FE, Ouvrages Références (Peterson, ESDU,...)</i></li>
-
-                                        <br />
-
-                                        <li><Strong>04/2011 – 12/2012:</Strong><br />Réalisation de la certification de la pointe avant A380 pour DAHER-SOCATA:<br />
-
-                                            Calcul analytique Statique et Fatigue de pièces et de fixations de la pointe Avant A380 pour les avions MSN2 et MSN95,<br />Réalisation de dossiers de certification Format AIRBUS,<br />Réalisation d’extraction de charges grâce aux outils PSN AIRBUS,<br />Traitement de Dérogations prenant en compte la nouvelle boucle de charge « A380e ».<br /><br /><i>Utilisation de PATRAN/NASTRAN, MTS004, M2841, ASSIST, SAFE, VBA.</i></li>
-
-                                        <br />
-
-                                        <li><Strong>12/2009 - 03/2011:</Strong><br />Traitement des dérogations A380 WP Alenia issues d’Alenia, Saint-Nazaire et Toulouse en tache 300-350 (tâches calcul) in-situ AIRBUS<br />
-                                            Contribution à la justification de pièces métalliques en statique et fatigue au travers des méthodologies développées au sein de l’équipe.<br /><br />
-                                            <i>Utilisation de SAP, MTS004, M2841, ASSIST, SAFE.</i></li>
-
-                                        <br />
-
-                                    </ul>
-                                </div>
-
-
-
-                                <h3><Strong>Janvier 2002 - Ingénieur Calcul chez AJILON ENGINEERING</Strong><br></h3>
-
-                                <div id="cacher3">
-                                    <ul>
-                                        <li><Strong>01/2008-04/2009:</Strong><br />Justification de l’installation de matériel aéronautique civil (GPS, ADU, TRANSCEIVER,...) sur l’avion C-130 AAF pour SABENA TECHNICS.<br /><br />
-
-                                            <i>Utilisation BRUHN, MILITARY HANDBOOK.</i></li>
-
-                                        <br />
-
-                                        <li><Strong>05/2005-12/2007:</Strong><br />Justification de la pointe avant A400M pour LABINAL :<br />
-
-                                            Calcul analytique de pièces et de fixations de la pointe Avant A400M,<br />Réalisation de dossiers de justification,<br />Réalisation du RF Mapping (statique, fatigue, tolérance aux dommages des Cadres,panneaux, Raidisseurs, lisses puis synthèse des résultats),<br />Traitement de Dérogations prenant en compte la nouvelle boucle de charge « A380e »,<br />Mise à jour géométrique du Modèle Elément Fini.<br /><br />
-                                            <i>Utilisation MTS004, ASSIST/ASSIST-LINK, ACSA, PSN1Excel, CADLINK, PATRAN, VBA.</i></li>
-
-                                        <br />
-
-                                        <li><Strong>05/2003 – 04/2005:</Strong><br />Travaux de dimensionnement réalisés au BE AJILON :<br />Tour de couture A380,<br />Outillages SOCOA, outillages CASA,<br />Antennes FRANCE TELECOM.<br /><br />
-                                            <i>Utilisation Eléments Finis EFFEL</i></li>
-
-                                        <br />
-
-
-                                        <li><Strong>01/2002 – 05/2002:</Strong><br />Certification A340-600 (BAE et STORK FOKKER) pour LABINAL .<br /><br />
-                                            <i>Utilisation MTS004, BRUHN, FOKKER methods.</i></li>
-
-                                        <br />
-
-                                    </ul>
-
-                                </div>
-
-                            </div></div>
-                    <br /><br />
 
                     <span class="ligne"><strong>Si mon profil vous interresse envoyez moi un </strong><a href="mailto:bonzomj@gmail.com">mail</a><strong>...</strong></span>
-                    <h5><i>Si vous avez un commentaire à propos de ce site, laissez moi un message...</i></h5>
 
-                    <div class="question">
-                        <form  action="deuxieme.php"  method="post">
-
-                            <div>
-
-                                <label  for="pseudo">Pseudo (10 caractères):</label>
-
-                                <input  type="text"  id="pseudo"  name="user_pseudo" maxlength="10">
-
-                            </div>
-                            <br>
-                            <div>
-
-                                <label  for="message">Message (100 caractères) :</label><br>
-
-                                <textarea  id="message"  name="user_message" rows="5" cols="66" maxlength="100"></textarea>
-
-                            </div>
-                            <br>
-                            <div  class="button">
-
-                                <button  type="submit">Envoyer votre message</button>
-
-                            </div>
-
-                        </form>
-
-
-
-
-
-                    </div>
         </div>
 
 {% endblock %}
