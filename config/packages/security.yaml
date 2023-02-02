@@ -37,6 +37,8 @@ security:
         - { path: ^/formation, roles: ROLE_ADMIN }
         - { path: ^/etapesPro, roles: ROLE_ADMIN }
         - { path: ^/mail/index, roles: ROLE_ADMIN }
+        - { path: ^/commentaires/index, roles: ROLE_ADMIN }
+
 when@test:
     security:
         password_hashers:
