@@ -3,12 +3,13 @@
 
 {% block body %}
 
-    {{ form_start(form) }}
+        <h1>Create new message</h1>
+        {{ form_start(form) }}
 
-    {{ form_widget(form) }}
+        {{ form_widget(form) }}
 
-  <button type="submit">Mail</button>
+      <button type="submit">Mail</button>
 
-    {{ form_end(form) }}
+        {{ form_end(form) }}
 
 {% endblock %}

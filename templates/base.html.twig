@@ -18,16 +18,16 @@
     </head>
 
     <body>
+    <br>  <br>  <br>
     {% for message in app.flashes('success') %}
         <div class="alert alert-success">
             {{ message }}
         </div>
     {% endfor %}
-        <div class="bordure"><!-- Bordure esthetique -->
-        </div>
-        <body_first>
-
-            {% include 'navbar.html.twig' %}
+         <body_first>
+            <div class="navbar_fixe">
+                {% include 'navbar.html.twig' %}
+            </div>
             {% block body %}{% endblock %}
         </body_first>
     </body>

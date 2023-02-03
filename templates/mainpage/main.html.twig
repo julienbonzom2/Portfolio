@@ -12,111 +12,103 @@
     }
 </script>
 <script async src="https://api.countapi.xyz/hit/cvjulienbonzom.online/visits?callback=cb"></script>
+        <div class="bloc_page">
+            <div class="bordure"><!-- Bordure esthetique --></div>
+            <bodyLast>
+                <div class="texte">
+                    <div class="partie_inf">
+
+                        <header>
+
+                            <div class="entete_sup3">
+                                <div class="entete_sup2">
+                                    <div class="entete">
+                                        <div class="nom">Julien BONZOM</div>
+                                        <div class="texte2">
+                                            100, avenue de la libération
+                                            <br /> 33700 MERIGNAC
+                                            <br /> tel: 06.76.11.84.57</div>
+
+                                        <div class="mail"><a href="mailto:bonzomj@gmail.com">bonzomj@gmail.com</a></div>
+                                        <br />
+                                        <i>This site has been visited <span id="visits"></span> times.</i>
+                                    </div>
 
 
-
-
-
-
-    <div class="bloc_page">
-
-
-        <bodyLast>
-            <div class="texte">
-                <div class="partie_inf">
-
-                    <header>
-
-                        <div class="entete_sup3">
-                            <div class="entete_sup2">
-                                <div class="entete">
-                                    <div class="nom">Julien BONZOM</div>
-                                    <div class="texte2">
-                                        100, avenue de la libération
-                                        <br /> 33700 MERIGNAC
-                                        <br /> tel: 06.76.11.84.57</div>
-
-                                    <div class="mail"><a href="mailto:bonzomj@gmail.com">bonzomj@gmail.com</a></div>
-                                    <br />
-                                    <i>This site has been visited <span id="visits"></span> times.</i>
+                                    <div class="fonction">Développeur/Ingénieur Mécanique</div><!-- Titre -->
                                 </div>
-
-
-                                <div class="fonction">Développeur/Ingénieur Mécanique</div><!-- Titre -->
+                                <div class="separation"></div>
                             </div>
-                            <div class="separation"></div>
-                        </div>
 
-                        <a href={{ asset("build/images/photo_J_BONZOM_2.jpg") }} class="fin"><img src={{ asset("build/images/photo_J_BONZOM_mini2.jpg") }} alt="Photo de Julien BONZOM" title="Cliquez pour agrandir" /></a><!--Image photo pouvant etre agrandie-->
+                            <a href={{ asset("build/images/photo_J_BONZOM_2.jpg") }} class="fin"><img src={{ asset("build/images/photo_J_BONZOM_mini2.jpg") }} alt="Photo de Julien BONZOM" title="Cliquez pour agrandir" /></a><!--Image photo pouvant etre agrandie-->
 
-                    </header>
+                        </header>
 
 
-                    <div class="total">
-                        <section> <!-- Section -->
-                            <div class="base">
-                                <div class="competences"><p><h2>Compétences:</h2>
-                                    <ul>
-                                        {% for skill in skills %}
-                                        <li><Strong>Languages Informatiques:</Strong> {{ skill.Languages }}</li>
-                                        <li><Strong>Outils AIRBUS:</Strong> {{ skill.AIRBUS }}</li>
-                                        <li><Strong>Outils DASSAULT:</Strong> {{ skill.DASSAULT }}</li>
-                                        <li><Strong>Outils CALCUL/DESIGN:</Strong> {{ skill.CALCUL_DESIGN }}</li>
-                                        <li><Strong>Outils OFFICE:</Strong> {{ skill.OFFICE }}</li>
-                                        <li><Strong>Langues:</Strong> {{ skill.Langues }}</li>
+                        <div class="total">
+                            <section> <!-- Section -->
+                                <div class="base">
+                                    <div class="competences"><p><h2>Compétences:</h2>
+                                        <ul>
+                                            {% for skill in skills %}
+                                            <li><Strong>Languages Informatiques:</Strong> {{ skill.Languages }}</li>
+                                            <li><Strong>Outils AIRBUS:</Strong> {{ skill.AIRBUS }}</li>
+                                            <li><Strong>Outils DASSAULT:</Strong> {{ skill.DASSAULT }}</li>
+                                            <li><Strong>Outils CALCUL/DESIGN:</Strong> {{ skill.CALCUL_DESIGN }}</li>
+                                            <li><Strong>Outils OFFICE:</Strong> {{ skill.OFFICE }}</li>
+                                            <li><Strong>Langues:</Strong> {{ skill.Langues }}</li>
+                                            {% endfor %}
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="formation"><p><h2>Formation:</h2>
+                                        {% for formation in formations %}
+                                        <ul>
+                                            <li><Strong>{{ formation.date }}</Strong> {{ formation.texte }}</li>
+                                        </ul>
                                         {% endfor %}
-                                    </ul>
 
+                                    </div>
+
+                                    <div class="stages"><p><h2>Stages:</h2>
+                                        <ul>
+                                        {% for stage in stages %}
+                                        <li><Strong>{{ stage.month_begin }}/{{ stage.year_begin }} – {{ stage.month_end }}/{{ stage.year_end }}:</Strong><br />Stage chez {{ stage.company }}.<br />{{ stage.descriptif }}</li>
+                                        {% endfor %}
+                                        </ul>
+                                    </div>
+                                    <div class="loisirs"><p><h2>Loisirs:</h2>
+                                        <ul>
+                                            <li><i>Sports de montagne, sports de mer, ateliers de musique Jazz.</i></li>
+                                        </ul>
+                                    </div>
                                 </div>
+                                <div class="espace"></div><!-- espace -->
+                                <div class="pro"><h2>Expériences Professionnelles:</h2>
+                                    <a href="http://127.0.0.1:8000/CV-J_BONZOM.pdf" target="_blank"><i><Strong>Curriculum vitae</Strong></i></a><br>
+                                    {% for etapepro in etapespro %}
+                                    <h3><Strong>{{ etapepro.mois }} {{ etapepro.year }} - {{ etapepro.job }} chez {{ etapepro.company }}</Strong><br /></h3>
+                                    <div id="cacher">
+                                        <ul>
+                                            {% for step in steps %}
 
-                                <div class="formation"><p><h2>Formation:</h2>
-                                    {% for formation in formations %}
-                                    <ul>
-                                        <li><Strong>{{ formation.date }}</Strong> {{ formation.texte }}</li>
-                                    </ul>
+                                                {% if  step.etapespro.company  ==  etapepro.company  %}
+                                                <li><Strong>{{ step.Month_begin }}/{{ step.Year_begin }} – {{ step.month_end }}/{{ step.year_end }}:</Strong><br />{{ step.description }}<br/>
+                                                    <i>Utilisation {{ step.skills }}</i>
+                                                </li>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                    <br>
                                     {% endfor %}
 
-                                </div>
-
-                                <div class="stages"><p><h2>Stages:</h2>
-                                    <ul>
-                                    {% for stage in stages %}
-                                    <li><Strong>{{ stage.month_begin }}/{{ stage.year_begin }} – {{ stage.month_end }}/{{ stage.year_end }}:</Strong><br />Stage chez {{ stage.company }}.<br />{{ stage.descriptif }}</li>
-                                    {% endfor %}
-                                    </ul>
-                                </div>
-                                <div class="loisirs"><p><h2>Loisirs:</h2>
-                                    <ul>
-                                        <li><i>Sports de montagne, sports de mer, ateliers de musique Jazz.</i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="espace"></div><!-- espace -->
-                            <div class="pro"><h2>Expériences Professionnelles:</h2>
-                                <a href="http://127.0.0.1:8000/CV-J_BONZOM.pdf" target="_blank"><i><Strong>Curriculum vitae</Strong></i></a>
-                                {% for etapepro in etapespro %}
-                                <h3><Strong>{{ etapepro.mois }} {{ etapepro.year }} - {{ etapepro.job }} chez {{ etapepro.company }}</Strong><br /></h3>
-                                <div id="cacher">
-                                    <ul>
-                                        {% for step in steps %}
-
-                                            {% if  step.etapespro.company  ==  etapepro.company  %}
-                                            <li><Strong>{{ step.Month_begin }}/{{ step.Year_begin }} – {{ step.month_end }}/{{ step.year_end }}:</Strong><br />{{ step.description }}<br/><br/>
-                                                <i>Utilisation {{ step.skills }}</i>
-                                            </li>
-                                            {% endif %}
-                                            <br />
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                                {% endfor %}
 
 
-                    <span class="ligne"><strong>Si mon profil vous interresse envoyez moi un </strong><a href="mailto:bonzomj@gmail.com">mail</a><strong>...</strong></span>
 
-        </div>
-
-{% endblock %}
+            </div>
+   {% endblock %}
 
 
 
