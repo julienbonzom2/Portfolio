@@ -13,14 +13,14 @@
                     <a class="nav-link" href="http://127.0.0.1:8000/loisirs">Loisirs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://127.0.0.1:8000/mail/new">Mail</a>
+                    <a class="nav-link" href="http://127.0.0.1:8000/mail/new">Message</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="http://127.0.0.1:8000/commentaires/new">Avis</a>
                 </li>
                 {% if app.user %}
 
-                    {{ app.user.username }}
+                    <div class="nav-link">{{ app.user.username }}</div>
 
                     <a class="nav-link" href="{{ path('app_logout') }}"> Se déconnecter</a>
 
