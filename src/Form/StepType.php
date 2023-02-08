@@ -12,10 +12,10 @@ class StepType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('Month_begin')
-            ->add('Year_begin')
-            ->add('month_end')
-            ->add('year_end')
+            ->add('monthbegin')
+            ->add('yearbegin')
+            ->add('monthend')
+            ->add('yearend')
             ->add('description')
             ->add('skills')
             ->add('Etapespro', null, ['choice_label' => 'company'])

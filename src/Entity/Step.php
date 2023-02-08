@@ -15,16 +15,16 @@ class Step
     private ?int $id = null;
 
     #[ORM\Column]
-    private ?int $Month_begin = null;
+    private ?int $MonthBegin = null;
 
     #[ORM\Column]
-    private ?int $Year_begin = null;
+    private ?int $YearBegin = null;
 
     #[ORM\Column]
-    private ?int $month_end = null;
+    private ?int $MonthEnd = null;
 
     #[ORM\Column]
-    private ?int $year_end = null;
+    private ?int $YearEnd = null;
 
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
@@ -40,50 +40,50 @@ class Step
         return $this->id;
     }
 
-    public function getMonth_Begin(): ?int
+    public function getMonthBegin(): ?int
     {
-        return $this->Month_begin;
+        return $this->MonthBegin;
     }
 
-    public function setMonth_Begin(int $Month_begin): self
+    public function setMonthBegin(int $MonthBegin): self
     {
-        $this->Month_begin = $Month_begin;
+        $this->MonthBegin = $MonthBegin;
 
         return $this;
     }
 
-    public function getYear_Begin(): ?int
+    public function getYearBegin(): ?int
     {
-        return $this->Year_begin;
+        return $this->YearBegin;
     }
 
-    public function setYear_Begin(int $Year_begin): self
+    public function setYearBegin(int $YearBegin): self
     {
-        $this->Year_begin = $Year_begin;
+        $this->YearBegin = $YearBegin;
 
         return $this;
     }
 
-    public function getMonth_End(): ?int
+    public function getMonthEnd(): ?int
     {
-        return $this->month_end;
+        return $this->MonthEnd;
     }
 
-    public function setMonth_End(int $month_end): self
+    public function setMonthEnd(int $MonthEnd): self
     {
-        $this->month_end = $month_end;
+        $this->MonthEnd = $MonthEnd;
 
         return $this;
     }
 
-    public function getYear_End(): ?int
+    public function getYearEnd(): ?int
     {
-        return $this->year_end;
+        return $this->YearEnd;
     }
 
-    public function setYear_End(int $year_end): self
+    public function setYearEnd(int $YearEnd): self
     {
-        $this->year_end = $year_end;
+        $this->YearEnd = $YearEnd;
 
         return $this;
     }

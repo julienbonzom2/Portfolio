@@ -14,7 +14,7 @@ class Commentaires
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    #[ORM\Column(length: 255)]
     private ?string $Pseudo = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]

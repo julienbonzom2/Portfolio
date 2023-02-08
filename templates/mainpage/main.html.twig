@@ -40,7 +40,7 @@
                                 <div class="separation"></div>
                             </div>
 
-                            <a href={{ asset("build/images/photo_J_BONZOM_2.jpg") }} class="fin"><img src={{ asset("build/images/photo_J_BONZOM_mini2.jpg") }} alt="Photo de Julien BONZOM" title="Cliquez pour agrandir" /></a><!--Image photo pouvant etre agrandie-->
+                            <a href={{ asset("photo_J_BONZOM_2.jpg") }} ><img src={{ asset("photo_J_BONZOM_mini2.jpg") }}  alt="Photo de Julien BONZOM" title="Cliquez pour agrandir" class="fin"/></a><!--Image photo pouvant etre agrandie-->
 
                         </header>
 
@@ -74,7 +74,7 @@
                                     <div class="stages"><p><h2>Stages:</h2>
                                         <ul>
                                         {% for stage in stages %}
-                                        <li><Strong>{{ stage.month_begin }}/{{ stage.year_begin }} – {{ stage.month_end }}/{{ stage.year_end }}:</Strong><br />Stage chez {{ stage.company }}.<br />{{ stage.descriptif }}</li>
+                                        <li><Strong>{{ stage.monthbegin }}/{{ stage.yearbegin }} – {{ stage.monthend }}/{{ stage.yearend }}:</Strong><br />Stage chez {{ stage.company }}.<br />{{ stage.descriptif }}</li>
                                         {% endfor %}
                                         </ul>
                                     </div>
@@ -94,7 +94,7 @@
                                             {% for step in steps %}
 
                                                 {% if  step.etapespro.company  ==  etapepro.company  %}
-                                                <li><Strong>{{ step.Month_begin }}/{{ step.Year_begin }} – {{ step.month_end }}/{{ step.year_end }}:</Strong><br />{{ step.description }}<br/>
+                                                <li><Strong>{{ step.monthbegin }}/{{ step.yearbegin }} – {{ step.monthend }}/{{ step.yearend }}:</Strong><br />{{ step.description }}<br/>
                                                     <i>Utilisation {{ step.skills }}</i>
                                                 </li>
                                                 {% endif %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Mail{% endblock %}
+
+{% block body %}
+    <div class="bloc_page">
+        <div class="bordure"><!-- Bordure esthetique --></div>
+            <div class="body_annexe">
+            <br>
+           <div class="Titre_Formulaire_Message">
+               <strong>Si mon profil vous interresse, laissez moi un message:</strong>
+           </div>
+            <br>
+    {{ include('mail/_form.html.twig') }}
+        </div>
+    </div>
+{% endblock %}

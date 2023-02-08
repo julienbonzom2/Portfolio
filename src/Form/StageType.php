@@ -12,12 +12,12 @@ class StageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('Month_begin')
-            ->add('Year_begin')
-            ->add('Month_end')
-            ->add('Year_end')
-            ->add('Company')
-            ->add('Descriptif')
+            ->add('monthbegin')
+            ->add('yearbegin')
+            ->add('monthend')
+            ->add('yearend')
+            ->add('company')
+            ->add('descriptif')
         ;
     }
 

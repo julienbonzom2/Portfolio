@@ -3,8 +3,13 @@
 {% block title %}New Commentaires{% endblock %}
 
 {% block body %}
-    <h1>Create new Commentaires</h1>
-
+<div class="bloc_page">
+    <div class="bordure"><!-- Bordure esthetique --></div>
+    <div class="body_annexe">
+        <div class="Titre_Formulaire_Message">
+            <br><strong>Si vous avez un commentaire à propos de ce site, laissez moi un message...</strong><br><br>
+        </div>
     {{ include('commentaires/_form.html.twig') }}
-
+    </div>
+</div>
 {% endblock %}

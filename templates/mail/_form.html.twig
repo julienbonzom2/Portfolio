@@ -1,0 +1,13 @@
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    {{ form_row(form.Email) }}
+    {{ form_row(form.Subject) }}
+    {{ form_row(form.Texte) }}
+
+
+
+<button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
