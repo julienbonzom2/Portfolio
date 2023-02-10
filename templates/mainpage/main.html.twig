@@ -90,9 +90,9 @@
                                     {% for etapepro in etapespro %}
                                     <h3><Strong>{{ etapepro.mois }} {{ etapepro.year }} - {{ etapepro.job }} chez {{ etapepro.company }}</Strong><br /></h3>
                                     <div id="cacher">
+                                        <img src="./images/menu.jpg" title="Cliquez pour etendre" id='bouton'/>
                                         <ul>
                                             {% for step in steps %}
-
                                                 {% if  step.etapespro.company  ==  etapepro.company  %}
                                                 <li><Strong>{{ step.monthbegin }}/{{ step.yearbegin }} – {{ step.monthend }}/{{ step.yearend }}:</Strong><br />{{ step.description }}<br/>
                                                     <i>Utilisation {{ step.skills }}</i>
