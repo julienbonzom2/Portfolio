@@ -16,7 +16,7 @@ BODYLAST
     flex-direction:row;
     justify-content: space-around;
 }
-.titres_loisirs
+.titres_montagne, .titres_musique
 {
     width:100%;
 }

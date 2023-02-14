@@ -80,17 +80,19 @@
                                     </div>
                                     <div class="loisirs"><p><h2>Loisirs:</h2>
                                         <ul>
-                                            <li><i>Sports de montagne, sports de mer, ateliers de musique Jazz.</i></li>
+                                            <li><i><a href="/loisirs#titres_montagne" >Sports de montagne</a>, sports de mer, <a href="/loisirs#titres_musique" >ateliers de musique Jazz</a>.</i></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="espace"></div><!-- espace -->
                                 <div class="pro"><h2>Expériences Professionnelles:</h2>
                                     <a href="http://127.0.0.1:8000/CV-J_BONZOM.pdf" target="_blank"><i><Strong>Curriculum vitae</Strong></i></a><br>
+                                    {% set iteration = 0 %}
                                     {% for etapepro in etapespro %}
+                                    {% set iteration = iteration + 1 %}
                                     <h3><Strong>{{ etapepro.mois }} {{ etapepro.year }} - {{ etapepro.job }} chez {{ etapepro.company }}</Strong><br /></h3>
-                                    <div id="cacher">
-                                        <img src="./images/menu.jpg" title="Cliquez pour etendre" id='bouton'/>
+                                    <div id={{ 'cacher'~ iteration }}>
+                                        <img src={{ asset("menu.jpg") }} title="Cliquez pour etendre" id={{ 'bouton'~ iteration }}}/>
                                         <ul>
                                             {% for step in steps %}
                                                 {% if  step.etapespro.company  ==  etapepro.company  %}
@@ -108,6 +110,55 @@
 
 
             </div>
+                                <script>
+
+
+                                    let bouton = ['','','','','',''];
+                                    let cacher = ['','','','','',''];
+                                    for (let pas = 0; pas < {{ iteration}} ; pas++) {
+
+                                        bouton[pas]='bouton' + pas;
+                                        cacher[pas]='bouton' + pas
+
+                                    window [bouton[pas]]= document.getElementById(bouton[pas]);
+                                    window [cacher[pas]] = document.getElementById(cacher[pas]);
+                                    }
+
+                                    cliquage()
+
+                                    function cliquage() {
+                                        for (let pas = 0; pas < {{ iteration}} ; pas++) {
+                                        if (window[bouton[pas]].style.display === "none") {
+                                            window [cacher[pas]].style.display = "block";
+                                            window[bouton[pas]].src="./images/menu2.jpg";
+                                            window[bouton[pas]].title="Cliquez pour réduire";
+                                        } elseif {
+                                            cacher.style.display  = "none";
+                                            window[bouton[pas]].src="./images/menu.jpg";
+                                            window[bouton[pas]].title="Cliquez pour étendre";
+
+                                        }}
+
+
+
+
+
+
+                                    function AdapterDivAResolution() {
+                                        let x_res = screen.width;
+                                        let y_res = screen.height;
+                                        const bouton1 = document.getElementById("bouton1")
+                                        if(x_res < 1024)
+                                        {
+                                            bouton1.src="./images/menu2.jpg";
+                                            bouton1.style.display = "block";
+                                            bouton1.style.visibility="visible";
+                                        }
+                                    }
+                                    AdapterDivAResolution()
+                                        bouton1.addEventListener('click',cliquage, false);
+
+                                </script>
    {% endblock %}
 
 
