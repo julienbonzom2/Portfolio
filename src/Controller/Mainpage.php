@@ -25,7 +25,7 @@ class Mainpage extends AbstractController
         $Formations=$formationRepository->findBy([], ['Date' => 'DESC']);
         $Skills=$skillsRepository->findAll();
         $Stages=$stagesRepository->findBy([], ['YearBegin' => 'DESC']);
-        $Steps=$stepsRepository->findBy([], ['YearBegin' => 'DESC'
+        $Steps=$stepsRepository->findBy([], ['YearBegin' => 'DESC']);
 
         return $this->render('mainpage/main.html.twig', [
 
