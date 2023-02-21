@@ -17,7 +17,7 @@ use Doctrine\ORM\QueryBuilder;
 class Mainpage extends AbstractController
 
 {
-    #[Route('/main/', name: 'main')]
+    #[Route('/main', name: 'main')]
     public function index(EtapesProRepository $etapesProRepository, FormationRepository $formationRepository,SkillsRepository $skillsRepository,StageRepository $stagesRepository,StepRepository $stepsRepository): Response
 
     {
@@ -25,8 +25,7 @@ class Mainpage extends AbstractController
         $Formations=$formationRepository->findBy([], ['Date' => 'DESC']);
         $Skills=$skillsRepository->findAll();
         $Stages=$stagesRepository->findBy([], ['YearBegin' => 'DESC']);
-        $Steps=$stepsRepository->findBy([], ['YearBegin' => 'DESC']);
-
+        $Steps=$stepsRepository->findBy([], ['YearBegin' => 'DESC'
 
         return $this->render('mainpage/main.html.twig', [
 
@@ -35,12 +34,7 @@ class Mainpage extends AbstractController
             'skills' => $Skills,
             'stages' => $Stages,
             'steps' => $Steps,
+
         ]);
-    }
-    #[Route('/pdf/', name: 'pdf')]
-    public function visualiserdocument() {
-        $projectRoot = $this->getParameter('kernel.project_dir');
-        $filename = "CV-J_BONZOM.pdf";
-        return $this->file( $projectRoot.'/public/documents/'.$filename );
     }
 }
